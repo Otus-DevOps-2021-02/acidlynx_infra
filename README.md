@@ -29,3 +29,12 @@ Host someinternalhost
 ```
 
 Then we can access via `ssh someinternalhost`.
+
+## Connect via VPN
+
+You can use file cloud-bastion.ovpn to setup VPN client and connect to these hosts
+
+```txt
+bastion_IP = 178.154.203.40
+someinternalhost_IP = 10.130.0.25
+```
