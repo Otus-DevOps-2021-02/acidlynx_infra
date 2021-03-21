@@ -40,3 +40,14 @@ someinternalhost_IP = 10.130.0.25
 ```
 
 Also you can get access to vpn configurator via address `https://bastion-vpn.binira.ru`
+
+## Homework 06
+
+Testapp deployment
+
+For access you can use *.ovpn file and these IPs
+
+```txt
+testapp_IP = 178.154.202.150
+testapp_port = 9292
+```
