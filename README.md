@@ -51,3 +51,9 @@ For access you can use *.ovpn file and these IPs
 testapp_IP = 178.154.202.150
 testapp_port = 9292
 ```
+
+How to use start-up script.
+
+```bash
+./startup_reddit_app.sh
+```
