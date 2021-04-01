@@ -57,3 +57,41 @@ How to use start-up script.
 ```bash
 ./startup_reddit_app.sh
 ```
+
+## Homework 07
+
+* Installed packer
+* Created serivce-account for yacloud
+* Created template ubuntu16.json for packer
+* Created variables template for packer
+
+Use this command to create new VM disk image. Before use,
+copy file `cp packer/variables.json.template packer/variables.json` and change values
+in the file `packer/variables.json`
+
+The next step is run:
+
+```bash
+cd packer
+packer build -var-file=variables.json ./ubuntu16.json
+```
+
+* Task with (*) from page 10.1
+
+To make backed image you should run
+
+```bash
+cd packer
+packer build -var-file=variables.json ./immutable.json
+```
+
+* Task with (*) from page 10.2
+
+To create instance with backed image
+
+```bash
+cd config-scripts
+./create-reddit-vm.sh
+```
+
+For check you can run `yc compute instance show reddit-app`, find external IP and to to `http://<IP>:9292` in the browser

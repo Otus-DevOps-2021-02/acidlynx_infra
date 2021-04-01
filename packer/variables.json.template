@@ -1,0 +1,6 @@
+{
+    "ya_folder_id": "folde_id",
+    "ya_source_image_family": "image_family",
+    "ya_service_account_key_file": "key_file",
+    "ya_subnet_id": "subnet_id"
+}
