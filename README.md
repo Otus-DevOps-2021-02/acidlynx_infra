@@ -94,4 +94,10 @@ cd config-scripts
 ./create-reddit-vm.sh
 ```
 
-For check you can run `yc compute instance show reddit-app`, find external IP and to to `http://<IP>:9292` in the browser
+For check you can run
+
+```bash
+yc compute instance show reddit-app --format=json | jq '."network_interfaces"[0]."primary_v4_address"."one_to_one_nat"."address"'
+```
+
+And with external IP go to `http://<IP>:9292` in the browser
