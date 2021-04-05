@@ -24,5 +24,14 @@ variable subnet_id {
 }
 
 variable service_account_key_file {
-  description = "../../key.json"
+  description = "Path to service-account key file .json"
+}
+
+variable connection_private_key_file {
+  description = "path to ssh private key file"
+}
+
+variable yc_instance_zone {
+  description = "Zone"
+  default = "ru-central1-a"
 }

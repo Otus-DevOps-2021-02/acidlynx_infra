@@ -101,3 +101,18 @@ yc compute instance show reddit-app --format=json | jq '."network_interfaces"[0]
 ```
 
 And with external IP go to `http://<IP>:9292` in the browser
+
+## Homework 08
+
+* Installed Terraform
+* Created declarative configurations with tf
+* Created input variables
+
+How to run tf:
+
+```bash
+cd terraform
+terraform apply
+```
+
+From output you can use `external_ip_address_app = <IP>` and apen URL via browser `http://<IP>:9292`

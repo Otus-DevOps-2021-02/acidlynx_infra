@@ -7,6 +7,7 @@ provider "yandex" {
 
 resource "yandex_compute_instance" "app" {
   name = "reddit-app"
+  zone = var.yc_instance_zone
 
   resources {
     cores  = 2
@@ -33,7 +34,7 @@ resource "yandex_compute_instance" "app" {
     host = yandex_compute_instance.app.network_interface.0.nat_ip_address
     user = "ubuntu"
     agent = false
-    private_key = file("~/.ssh/yandexcloud_appuser_rsa")
+    private_key = file(var.connection_private_key_file)
   }
 
   provisioner "file" {
