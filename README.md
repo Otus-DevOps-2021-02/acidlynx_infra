@@ -117,7 +117,7 @@ terraform apply
 
 From output you can use `external_ip_address_app = <IP>` and apen URL via browser `http://<IP>:9292`
 
-* Task with (**) from page 42
+* Task with (**) from page 48
 
 Created config for load-balancer
 
@@ -129,3 +129,9 @@ terraform apply
 ```
 
 From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL via browser `http://<IP>:9292`
+
+* Task with (**) from page 49
+
+Created config (copy-paste) for the second instance. Added this one to load-balancer.
+
+The main issues when copy-paste style are unproperly variables management and worth code.
