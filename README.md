@@ -116,3 +116,16 @@ terraform apply
 ```
 
 From output you can use `external_ip_address_app = <IP>` and apen URL via browser `http://<IP>:9292`
+
+* Task with (**) from page 42
+
+Created config for load-balancer
+
+How to run tf:
+
+```bash
+cd terraform
+terraform apply
+```
+
+From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL via browser `http://<IP>:9292`

@@ -35,3 +35,12 @@ variable yc_instance_zone {
   description = "Zone"
   default = "ru-central1-a"
 }
+
+variable yc_region_id {
+  description = "Region id"
+  default = "ru-central1"
+}
+
+variable yc_target_group {
+  description = "Load balancer target group"
+}
