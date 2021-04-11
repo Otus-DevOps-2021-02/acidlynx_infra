@@ -1,20 +1,10 @@
 resource "yandex_lb_target_group" "reddit-app-target-group" {
   name      = var.yc_target_group
   region_id = var.yc_region_id
-
-  target {
-    subnet_id = var.subnet_id
-    address   = yandex_compute_instance.app.network_interface.0.ip_address
-  }
-
-   target {
-    subnet_id = var.subnet_id
-    address   = yandex_compute_instance.app2.network_interface.0.ip_address
-  }
 }
 
 resource "yandex_lb_network_load_balancer" "load-balancer" {
-  name = "reddit-app-laod-balancer"
+  name = "reddit-app-load-balancer"
 
   listener {
     name = "my-listener"

@@ -44,3 +44,8 @@ variable yc_region_id {
 variable yc_target_group {
   description = "Load balancer target group"
 }
+
+variable yc_count_instances {
+    description = "Count of instances of reddit-app"
+    default = 1
+}

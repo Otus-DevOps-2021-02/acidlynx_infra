@@ -126,6 +126,7 @@ How to run tf:
 ```bash
 cd terraform
 terraform apply
+terraform show external_ip_address_loadbalancer
 ```
 
 From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL via browser `http://<IP>:9292`
@@ -135,3 +136,19 @@ From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL v
 Created config (copy-paste) for the second instance. Added this one to load-balancer.
 
 The main issues when copy-paste style are unproperly variables management and worth code.
+
+ * Task with (**) from page 50
+
+Created new config using `count` feature of terraform
+Created script that adds created instances to target group of load-balancer
+
+How to use
+
+```bash
+cd terraform
+terraform apply
+./add_instances_to_target_group.sh
+terraform show external_ip_address_loadbalancer
+```
+
+From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL via browser `http://<IP>:9292`
