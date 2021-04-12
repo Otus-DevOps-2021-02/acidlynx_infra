@@ -101,3 +101,54 @@ yc compute instance show reddit-app --format=json | jq '."network_interfaces"[0]
 ```
 
 And with external IP go to `http://<IP>:9292` in the browser
+
+## Homework 08
+
+* Installed Terraform
+* Created declarative configurations with tf
+* Created input variables
+
+How to run tf:
+
+```bash
+cd terraform
+terraform apply
+```
+
+From output you can use `external_ip_address_app = <IP>` and apen URL via browser `http://<IP>:9292`
+
+* Task with (**) from page 48
+
+Created config for load-balancer
+
+How to run tf:
+
+```bash
+cd terraform
+terraform apply
+terraform show external_ip_address_loadbalancer
+```
+
+From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL via browser `http://<IP>:9292`
+
+* Task with (**) from page 49
+
+Created config (copy-paste) for the second instance. Added this one to load-balancer.
+
+The main issues when copy-paste style are unproperly variables management and worth code.
+
+ * Task with (**) from page 50
+
+Created new config using `count` feature of terraform
+Created script that adds created instances to target group of load-balancer
+
+How to use
+
+```bash
+cd terraform
+terraform apply
+./add_instances_to_target_group.sh
+terraform show external_ip_address_loadbalancer
+```
+
+From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL via browser `http://<IP>:9292`
