@@ -7,3 +7,6 @@ subnet_id = ""
 service_account_key_file = "../packer/files/key.json"
 connection_private_key_file = ""
 yc_target_group = ""
+yc_count_instances = 1
+app_disk_image = ""
+db_disk_image = ""
