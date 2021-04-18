@@ -1,5 +1,6 @@
 resource "yandex_compute_instance" "db" {
   name = "reddit-db"
+  zone = "ru-central1-a"
 
   labels = {
     "tags" = "reddit-db"

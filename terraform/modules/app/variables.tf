@@ -10,3 +10,7 @@ variable app_disk_image {
 variable subnet_id {
   description = "Subnets of module"
 }
+
+variable connection_private_key_file {
+  description = "path to ssh private key file"
+}
