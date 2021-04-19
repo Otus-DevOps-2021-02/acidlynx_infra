@@ -1,0 +1,12 @@
+cloud_id                    = "b1g6d1rfgfc3iv315ddg"
+folder_id                   = "b1gpjo9f3oe29flvbde8"
+zone                        = "ru-central1-a"
+image_id                    = "fd8h4bkrrmvemt3mbc9t"
+public_key_path             = "~/.ssh/yandexcloud_appuser_rsa.pub"
+subnet_id                   = "e9b4h66g4u7nr6bj0mnv"
+service_account_key_file    = "../../../key.json"
+connection_private_key_file = "~/.ssh/yandexcloud_appuser_rsa"
+yc_target_group             = "reddit-app-target-group"
+yc_count_instances          = 1
+app_disk_image              = "fd8sing1hila05oik6ep"
+db_disk_image               = "fd81e3qojbep30643d8b"
