@@ -1,30 +1,24 @@
-provider "yandex" {
-  service_account_key_file = var.service_account_key_file
-  cloud_id  = var.cloud_id
-  folder_id = var.folder_id
-  zone      = var.zone
-}
-
 resource "yandex_compute_instance" "app" {
-  name = "reddit-app-${count.index}"
-  zone = var.yc_instance_zone
+  name = "reddit-app"
 
-  count = var.yc_count_instances
+  labels = {
+    "tags" = "reddit-app"
+  }
 
   resources {
-    cores  = 2
+    cores = 2
     memory = 2
   }
 
   boot_disk {
     initialize_params {
-      image_id = var.image_id
+      image_id = var.app_disk_image
     }
   }
 
   network_interface {
     subnet_id = var.subnet_id
-    nat       = true
+    nat = true
   }
 
   metadata = {

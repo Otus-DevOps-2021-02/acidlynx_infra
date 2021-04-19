@@ -152,3 +152,10 @@ terraform show external_ip_address_loadbalancer
 ```
 
 From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL via browser `http://<IP>:9292`
+
+## Homework 09
+
+* Used terraform variables
+* Made terraform modules (modules/app, modules/db)
+* Made terraform environments (prod, stage)
+* (**) Made task from page 30
