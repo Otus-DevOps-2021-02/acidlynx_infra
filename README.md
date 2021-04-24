@@ -159,3 +159,28 @@ From output you can use `external_ip_address_loadbalancer = <IP>` and apen URL v
 * Made terraform modules (modules/app, modules/db)
 * Made terraform environments (prod, stage)
 * (**) Made task from page 30
+
+## Homework 10
+
+* Installed Ansible
+* Configured Ansible
+* Tried several modules (command, shell, git)
+* Made playbook
+
+How to check (ping hosts via ansible):
+
+```bash
+cd terraform/stage
+terraform apply
+cd ../../ansible
+vim inventory
+ansible appserver -i ./inventory -m ping
+ansible dbserver -i ./inventory -m ping
+ansible dbserver -m command -a uptime
+ansible app -m ping
+ansible app -m shell -a 'ruby -v; bundler -v'
+ansible db -m command -a 'systemctl status mongod'
+ansible db -m systemd -a name=mongod
+ansible db -m service -a name=mongod
+ansible-playbook clone.yml
+```
