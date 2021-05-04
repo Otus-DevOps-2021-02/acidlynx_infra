@@ -184,3 +184,27 @@ ansible db -m systemd -a name=mongod
 ansible db -m service -a name=mongod
 ansible-playbook clone.yml
 ```
+
+## Homework 11
+
+* Made multiple playbooks
+* Re-configured packer using ansible for provisioning
+* Re-configured terraform
+* Made common playbook
+
+How to check
+
+```bash
+packer build -var-file packer/variables.json packer/app.js
+packer build -var-file packer/variables.json packer/db.js
+
+cd terraform/stage
+terraform apply
+
+cd ../../
+
+ansible-playbook site.yml --tags=db-tag
+# or
+ansible-playbook db.yml
+
+```
