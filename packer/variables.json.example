@@ -1,6 +1,6 @@
 {
     "ya_folder_id": "b",
     "ya_source_image_family": "ubuntu-1604-lts",
-    "ya_service_account_key_file": "files/key.json",
+    "ya_service_account_key_file": "packer/files/key.json",
     "ya_subnet_id": "e"
 }
