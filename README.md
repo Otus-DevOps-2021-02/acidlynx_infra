@@ -195,8 +195,8 @@ ansible-playbook clone.yml
 How to check
 
 ```bash
-packer build -var-file packer/variables.json packer/app.js
-packer build -var-file packer/variables.json packer/db.js
+packer build -var-file packer/variables.json packer/app.json
+packer build -var-file packer/variables.json packer/db.json
 
 cd terraform/stage
 terraform apply
@@ -208,3 +208,11 @@ ansible-playbook site.yml --tags=db-tag
 ansible-playbook db.yml
 
 ```
+
+## Homework 12
+
+* Made roles for ansible
+* Made stage and prod environments
+* Re-organized folder structure for ansible
+* Worked with community role
+* Maked encripted file for credentials
