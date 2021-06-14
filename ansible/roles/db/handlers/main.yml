@@ -1,4 +1,7 @@
 ---
 # handlers file for db
 - name: restart mongod
-  service: name=mongod state=restarted
+  ansible.builtin.service:
+    name: mongod
+    state: restarted
+  become: yes
