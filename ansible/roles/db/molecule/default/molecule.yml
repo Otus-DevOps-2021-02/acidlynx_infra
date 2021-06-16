@@ -12,7 +12,5 @@ platforms:
     box: ubuntu/xenial64
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
 verifier:
-  name: ansible
+  name: testinfra
