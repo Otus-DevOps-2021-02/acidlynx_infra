@@ -216,3 +216,29 @@ ansible-playbook db.yml
 * Re-organized folder structure for ansible
 * Worked with community role
 * Maked encripted file for credentials
+
+## Homwework 13
+
+* Installed Vagrant, VirtualBox
+* Configured Vagrant for testing (Vagrantfile)
+* Re-configured ansible for use vagrant
+* (*) from page 30. Configured nginx as proxy
+* Installed molecule and wrote tests for infra
+
+
+Useful commands
+
+ ```bash
+ cd ansible/
+ vagrant up
+ vagrant provision dbserver
+ vagrant provision appserver
+ vagrant destroy -f
+
+ pip install -r requirements.txt
+
+ cd roles/db
+ molecule init scenario default -r db -d vagrant
+ molecule converge
+ molecule verify
+ ```
